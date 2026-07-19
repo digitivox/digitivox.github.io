@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Digitivox</title>
+<meta name="description" content="Selected web development, social media, and digital marketing projects by Digitivox.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="orbit-mark"><svg viewBox="0 0 40 40" fill="none">
+        <circle cx="20" cy="20" r="4" fill="#29E0C8"/>
+        <ellipse cx="20" cy="20" rx="18" ry="8" stroke="#7C5CFC" stroke-width="1.6" transform="rotate(30 20 20)"/>
+        <ellipse cx="20" cy="20" rx="18" ry="8" stroke="#29E0C8" stroke-width="1.2" opacity="0.5" transform="rotate(-30 20 20)"/>
+      </svg></span>
+      Digi<span>tivox</span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="contact.html" class="btn btn-primary btn-sm">Get a Quote</a>
+  </div>
+</header>
+
+<div class="page-head">
+  <p class="breadcrumb"><a href="index.html">Home</a> / Portfolio</p>
+  <h1>Selected Work</h1>
+  <p>A look at recent websites and campaigns we've shipped for clients.</p>
+</div>
+
+<section class="section">
+  <div class="work-grid" id="workGrid"></div>
+</section>
+
+<section class="section">
+  <div class="cta-banner">
+    <p class="eyebrow" style="justify-content:center;">Your Project Could Be Next</p>
+    <h2>Let's add your brand to this list.</h2>
+    <p>Tell us about your project — we'll reply within one business day.</p>
+    <a href="contact.html" class="btn btn-primary">Start a Project</a>
+  </div>
+</section>
+
+<footer class="site-footer" id="footer"></footer>
+<script src="js/main.js"></script>
+<script>
+  const projects = [
+    { title: "Zivra — Jewellery Store", tag: "Web Development", desc: "Full artificial-jewellery e-commerce site with product catalogue, cart, and WhatsApp checkout — built and launched on a lean budget.", c1: "#7C5CFC", c2: "#29E0C8" },
+    { title: "Brand Refresh Campaign", tag: "Social Media", desc: "90-day content strategy and visual refresh that grew an Instagram page from 2K to 12K engaged followers.", c1: "#29E0C8", c2: "#FF6F61" },
+    { title: "Local Search Growth", tag: "Digital Marketing", desc: "Technical SEO overhaul and Google Business optimization that moved a local business to page-one rankings in 3 months.", c1: "#FF6F61", c2: "#7C5CFC" },
+    { title: "Restaurant Ordering Site", tag: "Web Development", desc: "Menu, gallery, and reservation-request site built for a growing restaurant chain.", c1: "#7C5CFC", c2: "#FF6F61" },
+    { title: "Ramadan Ad Campaign", tag: "Digital Marketing", desc: "Seasonal Meta ad campaign generating a 3.4x return on ad spend across a 6-week window.", c1: "#29E0C8", c2: "#7C5CFC" },
+    { title: "Boutique Content Calendar", tag: "Social Media", desc: "Full visual identity and monthly content system for a fashion boutique's Instagram presence.", c1: "#FF6F61", c2: "#29E0C8" },
+  ];
+  document.getElementById("workGrid").innerHTML = projects.map(w => `
+    <article class="work-card">
+      <div class="work-media">
+        <span class="work-tag">${w.tag}</span>
+        <svg viewBox="0 0 300 225" preserveAspectRatio="xMidYMid slice">
+          <defs><linearGradient id="g-${w.title.replace(/\s/g,'')}" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="${w.c1}" stop-opacity="0.35"/><stop offset="1" stop-color="${w.c2}" stop-opacity="0.15"/>
+          </linearGradient></defs>
+          <rect width="300" height="225" fill="#12162B"/>
+          <rect width="300" height="225" fill="url(#g-${w.title.replace(/\s/g,'')})"/>
+          <circle cx="150" cy="112" r="46" fill="none" stroke="${w.c1}" stroke-width="1.4"/>
+          <circle cx="150" cy="112" r="70" fill="none" stroke="${w.c2}" stroke-width="1" opacity="0.6"/>
+        </svg>
+      </div>
+      <div class="work-body"><h3>${w.title}</h3><p>${w.desc}</p></div>
+    </article>
+  `).join("");
+</script>
+</body>
+</html>
