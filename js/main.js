@@ -91,7 +91,7 @@ function injectFooter() {
       </div>
       <div class="footer-col">
         <h4>Get in Touch</h4>
-        <p>WhatsApp: +92 300 1234567<br>
+        <p>WhatsApp: +92 346 6124147<br>
         Email: ${CONTACT_EMAIL}<br>
         Mon–Sat, 11 AM – 8 PM</p>
       </div>
