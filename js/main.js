@@ -2,8 +2,8 @@
    DIGITIVOX — Site Logic
    ========================================================================== */
 
-const WHATSAPP_NUMBER = "923001234567"; // <-- apna WhatsApp number yahan daalen
-const CONTACT_EMAIL = "hello@digitivox.co";
+const WHATSAPP_NUMBER = "923466124147"; // <-- apna WhatsApp number yahan daalen
+const CONTACT_EMAIL = "khushnoodpk@gmail.com";
 
 /* ---------------------------------------------------------------------- */
 /* MOBILE MENU                                                            */
